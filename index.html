@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Size Change</title>
+    <style>
+        #start{
+            width: 100vh;
+            height: 100vh;
+            background-color: aqua;
+            margin: auto;
+            text-align: center;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body onload="late()">
+    <p id="start">Look at me</p>
+    <script>
+        let p = document.getElementById("start");
+        function size(x){
+            p.style.fontSize  = x + "px";
+            console.log(x);
+            let bck = p.style.background = "#" + Math.floor(Math.random() * 6) + Math.floor(Math.random() * 6) + Math.floor(Math.random() * 6) + Math.floor(Math.random() * 6) + Math.floor(Math.random() * 6) + Math.floor(Math.random() * 6)
+            console.log(bck);
+            p.style.color  = "#fff";
+             
+            };
+        function change(){ 
+            for (let i = 3; i <= 100; i++) {
+                setTimeout(size(i), 5000);
+            };
+        }
+        function late(){setTimeout(change(), 20000)};
+    </script>
+</body>
+</html>
